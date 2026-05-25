@@ -1,0 +1,139 @@
+services:
+  postgres:
+    image: public.ecr.aws/supabase/postgres:17.4.1.072
+    container_name: jaihind-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - supabase_db_jaihind-results:/var/lib/postgresql/data
+
+  studio:
+    image: supabase/studio:latest
+    container_name: jaihind-studio
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      STUDIO_PG_META_URL: http://meta:8080
+      POSTGRES_PASSWORD: postgres
+      DEFAULT_ORGANIZATION_NAME: Jai Hind
+      DEFAULT_PROJECT_NAME: Jai Hind Results
+      SUPABASE_URL: http://kong:8000
+
+  kong:
+    image: kong:2.8.1
+    container_name: jaihind-kong
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /kong.yml
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
+    volumes:
+      - ./kong.yml:/kong.yml:ro
+
+  auth:
+    image: supabase/gotrue:v2.177.0
+    container_name: jaihind-auth
+    restart: unless-stopped
+    ports:
+      - "9999:9999"
+    environment:
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: 9999
+      API_EXTERNAL_URL: http://localhost:8000
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      GOTRUE_SITE_URL: http://localhost:3000
+      GOTRUE_JWT_SECRET: super-secret-jwt-token-with-at-least-32-characters-long
+
+  rest:
+    image: postgrest/postgrest:latest
+    container_name: jaihind-rest
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      PGRST_DB_URI: postgres://postgres:postgres@postgres:5432/postgres
+      PGRST_DB_SCHEMA: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: super-secret-jwt-token-with-at-least-32-characters-long
+
+  realtime:
+    image: supabase/realtime:latest
+    container_name: jaihind-realtime
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: postgres
+      PORT: 4000
+      SECRET_KEY_BASE: super-secret-key-base
+
+  storage:
+    image: supabase/storage-api:latest
+    container_name: jaihind-storage
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      ANON_KEY: anon-key
+      SERVICE_KEY: service-key
+      POSTGREST_URL: http://rest:3000
+      PGRST_JWT_SECRET: super-secret-jwt-token-with-at-least-32-characters-long
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      FILE_SIZE_LIMIT: 52428800
+      STORAGE_BACKEND: file
+      FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+      PORT: 5000
+    volumes:
+      - supabase_storage_jaihind-results:/var/lib/storage
+
+  meta:
+    image: supabase/postgres-meta:v0.89.0
+    container_name: jaihind-meta
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      PG_META_PORT: 8080
+      PG_META_DB_HOST: postgres
+      PG_META_DB_PORT: 5432
+      PG_META_DB_NAME: postgres
+      PG_META_DB_USER: postgres
+      PG_META_DB_PASSWORD: postgres
+
+  analytics:
+    image: supabase/logflare:latest
+    container_name: jaihind-analytics
+    restart: unless-stopped
+    ports:
+      - "4001:4000"
+    environment:
+      LOGFLARE_NODE_HOST: 0.0.0.0
+      DB_USERNAME: postgres
+      DB_DATABASE: postgres
+      DB_HOSTNAME: postgres
+      DB_PORT: 5432
+      DB_PASSWORD: postgres
+
+volumes:
+  supabase_db_jaihind-results:
+    external: true
+
+  supabase_storage_jaihind-results:
+    external: true

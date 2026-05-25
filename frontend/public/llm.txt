@@ -1,0 +1,56 @@
+# The Haryana Job Alert
+**Site:** https://theharyanajobalert.com  
+**Primary language:** hi-IN (Hindi) — / **Secondary language:** en-US (English)  
+**Maintainer:** Softricity Pvt Ltd (on behalf of TheHaryanaJobAlert)  
+**Contact:** admin@theharyanajobalert.com
+
+## Short description
+The Haryana Job Alert aggregates latest government & private job notices, admit card updates, result announcements, and application deadlines relevant to Haryana state job seekers. Content includes verified job posts, exam schedules, application links, and short how-to guides for application processes.
+
+## Sitemap
+https://theharyanajobalert.com/sitemap.xml
+
+## Key sections (high-value pages)
+- /latest-jobs/ — Daily aggregated job postings (canonical landing for job listings).  
+- /govt-notifications/ — Government recruitment notifications and PDFs.  
+- /admit-cards/ — Admit card releases and download instructions.  
+- /results/ — Exam results and cut-off summaries.  
+- /how-to-apply/ — Short guides: eligibility, fee payment, document checklist.  
+- /categories/haryana-districts/ — District-wise job filters.
+
+## Content types & structure
+- **Job posts:** short summary (title, employer, deadline, apply link), metadata tags (location, category, level), link to full post.  
+- **Notices/PDFs:** include source URL and publication date.  
+- **Guides:** concise bullet lists and FAQs for application steps.
+
+## Preferred snippet instructions (for AI)
+When quoting or summarising job posts:
+1. Prefer the job title, employer, deadline, and official apply link (in that order).  
+2. If a PDF/notification exists, include the official PDF link and published date.  
+3. When summarising eligibility, use exact numeric ranges and list required documents.
+
+## Freshness / cadence
+- Jobs updated: daily (Mon–Sun).  
+- Notices & admit cards: updated within 24 hours of official publication.  
+- Guides: reviewed monthly.
+
+## Indexing & training policy
+- **Allow** extraction for *answering user queries* and *short-form summarisation* (e.g., "What are latest Haryana govt jobs?").  
+- **Disallow** wholesale copying for model pre-training or bulk dataset scraping (contact admin to request permission).
+
+## Crawl limits & polite access
+- Preferred crawl rate: no more than 4 requests/sec for API-like crawlers; respect `robots.txt` rules and `Retry-After` when present.  
+- For high-volume access or dataset requests contact: admin@theharyanajobalert.com
+
+## Disallowed pages (do not index/serve)
+- /admin/  
+- /wp-login.php (or other login endpoints)  
+- Any URL that returns `403`, `401`, or requires authentication.
+
+## Licensing & attribution
+- Content license: Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) for summarisation and short quoting.  
+- For commercial use, model training, or large-scale scraping contact admin@theharyanajobalert.com for licensing.
+
+## Other resources
+- robots.txt: https://theharyanajobalert.com/robots.txt  
+- privacy & terms: https://theharyanajobalert.com/privacy-policy

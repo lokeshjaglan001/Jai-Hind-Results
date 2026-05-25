@@ -1,0 +1,439 @@
+I will provide you a html template which you have to use to input blog post content in and provide me the full html code with the content inside it I will be the providing you the content you have to rephrase it ( the provided content will be SEO optimised, so don't make major changes in the keywords, use same keywords ( the ones being used often) ) put it into a html template and give me the full html code
+
+
+
+
+
+you have to follow below given code format and keep the design and layouting exactly similar to the one given below 
+
+
+
+
+
+you have to just fill content into this html template and provide me the final html code with content in that
+
+
+
+Also, If you find any "https://sarkariresult.com.cm/" , "Sarkari result" elements/text. Then, replace them with "theharyanajobalert.com", "The Haryana Job Alert".
+
+
+
+Mostly importantly, if you receive HTML file/ HTML code, please take all the links from it and then put it into your HTML output code as well please
+
+
+
+I will be mostly uploading a HTML code file, you just have to take all the content ( text ) from it and also all the links, you do not need to read the whole html code, just look for texts along with the links and then put all that content in the HTML template and provide me the code. Ensure that each piece of content is in the Output HTML code of yours. 
+
+
+
+Scenarios: There could be a scenario ( often ), that the content i would provide you will have more content and it cannot fit in the html template I provided you. Then, you can take that content and put it into new created html by "YOU" implies you are allowed to created more html code other than the template for content but it must follow the same structure and design
+
+
+
+Ensure that you are putting links in the buttons, links or everywhere it has to be in the output HTML code. LInks have to be included in the output code as it is very important
+
+
+
+Whatsapp Channel: ‎Follow the Haryana job alert channel on WhatsApp: https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i
+
+
+
+put this whatsapp channel link whereas it is needed or menstioned. Whenever there is a what'sapp channel link, You have to use " https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i " for it.
+
+
+
+TELEGRAM CHANNEL: https://t.me/theharyanajobalertofficial ( this is our telegram channel link )
+
+
+
+HTML Template: 
+
+
+<div>
+
+        <main style="padding: 20px;">
+
+            <h2 style="color: #00008b; font-size: 24px;">Lorem ipsum dolor sit amet</h2>
+
+            <p style="font-size: 14px; color: #555;">Lorem Ipsum: 00 Lorem 0000</p>
+
+            <p style="font-size: 16px; line-height: 1.6;">
+
+                <strong style="color: #990000;">Lorem Ipsum,</strong> dolor sit amet, consectetur adipiscing elit. <strong style="color: #990000;">Sed do eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <strong style="color: #990000;">laboris nisi</strong> ut aliquip ex ea commodo consequat. Duis aute irure dolor in <strong style="color: #990000;">reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <strong style="color: #990000;">cupidatat non</strong> proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </p>
+
+
+
+            <div style="margin: 20px 0;">
+
+                <a href="#" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; margin-right: 10px; font-weight: bold; text-decoration: none;">
+
+                    <span style="vertical-align: middle;">Lorem Ipsum</span>
+
+                </a>
+
+                <a href="#" style="background-color: #0088cc; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none;">
+
+                     <span style="vertical-align: middle;">Dolor Sit</span>
+
+                </a>
+
+            </div>
+
+
+            <div style="border: 2px solid #00008b; margin-top: 30px;">
+
+                <div style="text-align: center; padding: 15px; border-bottom: 2px solid #00008b;">
+
+                    <h3 style="margin: 0; font-size: 20px; color: #00008b;">Lorem ipsum dolor sit amet consectetur adipiscing elit</h3>
+
+                    <p style="margin: 5px 0 0; font-size: 18px; color: #990000; font-weight: bold;">Lorem ipsum dolor sit amet : Short Details</p>
+
+                    <a href="/" style="color: #0000FF; font-weight: bold; font-size: 18px; text-decoration: none;">Lorem Ipsum</a>
+
+                </div>
+
+
+
+                <table style="width: 100%; border-collapse: collapse;">
+
+                    <thead>
+
+                        <tr style="background-color: #990000; color: white;">
+
+                            <th style="padding: 12px; text-align: center; font-size: 18px; border-right: 1px solid #fff;">Lorem Ipsum</th>
+
+                            <th style="padding: 12px; text-align: center; font-size: 18px;">Dolor Sit</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td style="padding: 15px; vertical-align: top; border-right: 2px solid #00008b;">
+
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+
+                                    <li style="margin-bottom: 8px;">Lorem ipsum dolor : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Sit amet consectetur : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Adipiscing elit sed : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Do eiusmod : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Tempor incididunt : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Ut labore et : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Dolore magna : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Aliqua ut enim : <strong>00 Lorem 0000</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Ad minim veniam : <strong style="background-color: yellow; padding: 2px 4px;">00 Lorem 0000 Available Now</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <strong>LOREM</strong> commodo consequat.</li>
+
+                                </ul>
+
+                            </td>
+
+                            <td style="padding: 15px; vertical-align: top;">
+
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+
+                                    <li style="margin-bottom: 8px;">Lorem, Ipsum : <strong>$ 0000/-</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Dolor / Sit, Amet : <strong>$ 0000/-</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Consectetur : <strong>$ 00/-</strong></li>
+
+                                    <li style="margin-bottom: 8px;"><strong>Adipiscing Elit (Sed):</strong> Do eiusmod tempor incididunt ut labore et dolore:
+
+                                            <ul style="padding-left: 20px; margin-top: 8px; list-style-type: disc;">
+
+                                                    <li style="margin-bottom: 8px;">Magna Aliqua</li>
+
+                                                    <li style="margin-bottom: 8px;">Ut Enim</li>
+
+                                                    <li style="margin-bottom: 8px;">Ad Minim</li>
+
+                                                    <li style="margin-bottom: 8px;">Veniam Quis</li>
+
+                                                    <li style="margin-bottom: 8px;">Nostrud Exercitation</li>
+
+                                            </ul>
+
+                                    </li>
+
+                                </ul>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                
+
+                 <table style="width: 100%; border-collapse: collapse; border-top: 2px solid #00008b;">
+
+                      <thead>
+
+                        <tr style="background-color: #990000; color: white;">
+
+                            <th style="padding: 12px; text-align: center; font-size: 18px; border-right: 1px solid #fff;">Lorem ipsum dolor sit amet : Consectetur Adipiscing Elit</th>
+
+                            <th style="padding: 12px; text-align: center; font-size: 18px; background-color: #ff4500;">Sed Do</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td style="padding: 15px; vertical-align: top; border-right: 2px solid #00008b;">
+
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+
+                                    <li style="margin-bottom: 8px;">Lorem Ipsum : <strong>00 Years</strong></li>
+
+                                    <li style="margin-bottom: 8px;">Dolor Sit : <strong>00 Years</strong></li>
+
+                                    <li style="margin-bottom: 8px;"><strong>LOREM</strong> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+                                </ul>
+
+                                <a href="#" style="background-color: #00008b; color: white; padding: 8px 15px; border-radius: 5px; display: inline-block; margin-left: 20px; margin-top: 10px; text-decoration: none;">
+
+                                    &#9200; Lorem ipsum dolor
+
+                                </a>
+
+                            </td>
+
+                            <td style="padding: 15px; vertical-align: middle; text-align: center; font-size: 24px; font-weight: bold;">
+
+                                N/A
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                 </table>
+
+
+
+            </div>
+
+
+
+        </main>
+
+    </div>
+
+
+
+    <div style="width:100%;">
+
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+
+            <thead>
+
+                <tr style="background-color: #f2f2f2;">
+
+                    <th colspan="3" style="background-color: #000080; color: white; padding: 10px 0; font-size: 18px; text-align: center; width: 100%;">
+
+                        Lorem Ipsum Dolor Sit Amet : Consectetur Adipiscing
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr style="background-color: #f2f2f2;">
+
+                    <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 30%;">
+
+                        Lorem Ipsum 
+
+                        <span style="color: #00008B; cursor: pointer;">
+
+                            &#9432; <a href="#" style="color: #00008B; text-decoration: none;">Dolor sit amet</a>
+
+                        </span>
+
+                    </th>
+
+                    <th style="border: 1px solid #ccc; padding: 10px; text-align: left; width: 20%;">Sed do eiusmod</th>
+
+                    <th style="border: 1px solid #ccc; padding: 10px; text-align: left;">Tempor incididunt</th>
+
+                </tr>
+
+                <tr>
+
+                    <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">Lorem ipsum dolor</td>
+
+                    <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">000</td>
+
+                    <td style="border: 1px solid #ccc; padding: 10px; vertical-align: top;">
+
+                        <ul style="margin: 0; list-style-type: disc; padding-left: 20px;">
+
+                            <li style="margin-bottom: 8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <div style="text-align:center; margin:20px 0;">
+            <div class="futureads" style="width:320px;height:100px;display:inline-block;" data-ad-slot="pw_49947"></div>
+        </div>
+
+        
+
+        <div style="border: 1px solid black; margin-top: 20px;">
+
+             <h2 style="padding: 8px; font-size: 14px; text-align: center; margin: 0; border-bottom: 1px solid black;">
+
+                <span style="background-color: #000080; color: white; padding: 5px;">
+
+                    Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit
+
+                </span>
+
+                    
+
+            </h2>
+
+            <div style="padding: 10px;">
+
+                <ul style="margin: 0; list-style-type: disc; padding-left: 20px; line-height: 1.6;">
+
+                    <li style="margin-bottom: 8px;">Lorem ipsum dolor sit amet <strong>Consectetur Adipiscing</strong> (Sed do eiusmod tempor).</li>
+
+                    <li style="margin-bottom: 8px;">Incididunt ut labore et dolore <strong>"Magna"</strong> aliqua.</li>
+
+                    <li style="margin-bottom: 8px;">Ut enim ad minim veniam <strong>"Quis Nostrud 0000"</strong>.</li>
+
+                    <li style="margin-bottom: 8px;">Exercitation ullamco <strong>Laboris Nisi, Ut Aliquip/Ex Ea Commodo, and Consequat</strong>.</li>
+
+                    <li style="margin-bottom: 8px;">Duis aute irure <strong>Dolor / Sit</strong>.</li>
+
+                    <li style="margin-bottom: 8px;">Your <strong>Reprehenderit</strong> in voluptate velit esse.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Cillum dolore eu fugiat nulla pariatur.</strong></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div style="border: 1px solid #ccc; margin-top: 20px;">
+
+            <p style="border-bottom: 1px solid #ccc; padding: 10px; margin: 0; font-weight: bold; background-color: #f2f2f2;">Lorem ipsum dolor</p>
+
+            <div style="padding: 10px;">
+
+                <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">
+
+                    <span>Lorem ipsum dolor sit amet</span>
+
+                    <span style="font-size: 20px;">&rsaquo;</span>
+
+                </a>
+
+                <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">
+
+                    <span>Consectetur adipiscing elit</span>
+
+                    <span style="font-size: 20px;">&rsaquo;</span>
+
+                </a>
+
+                <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">
+
+                    <span>Sed do eiusmod tempor incididunt</span>
+
+                    <span style="font-size: 20px;">&rsaquo;</span>
+
+                </a>
+
+                <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">
+
+                    <span>Ut labore et dolore magna</span>
+
+                    <span style="font-size: 20px;">&rsaquo;</span>
+
+                </a>
+
+                <a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; text-decoration: none; color: #333;">
+
+                    <span>Aliqua ut enim ad minim</span>
+
+                    <span style="font-size: 20px;">&rsaquo;</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div style="width: 100%; margin-top: 20px;">
+
+        <div style="text-align: left; margin: 20px 0;">
+
+                <a href="#" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; margin-right: 10px; font-weight: bold; text-decoration: none;">
+
+                    <span style="vertical-align: middle;">Lorem Ipsum</span>
+
+                </a>
+
+                <a href="#" style="background-color: #0088cc; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none;">
+
+                     <span style="vertical-align: middle;">Dolor Sit</span>
+
+                </a>
+
+            </div>
+
+            <p>
+
+                <span style="font-weight: bold;">Lorem Ipsum:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+            </p>
+        <div style="text-align:center; margin:20px 0;">
+            <div class="futureads" style="width:320px;height:100px;display:inline-block;" data-ad-slot="pw_49947"></div>
+        </div>
+
+    </div>
