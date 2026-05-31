@@ -187,7 +187,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, categories
   return (
     <div className="bg-white w-full min-h-screen">
       <Head>
-        <title>{`${category.name} | Haryana Job Alert`}</title>
+        <title>{`${category.name} | Jai Hind result`}</title>
         <meta
           name="description"
           content={category.description || `Browse all posts in ${category.name} category`}

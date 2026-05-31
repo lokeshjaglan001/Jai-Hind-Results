@@ -166,7 +166,7 @@ const ResultsPage: React.FC = () => {
 
   return (
     <DashboardLayout>
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full px-4 lg:px-6">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">My Test Results</h1>

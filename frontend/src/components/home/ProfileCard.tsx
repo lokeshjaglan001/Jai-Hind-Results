@@ -18,10 +18,10 @@ interface ProfileCardProps {
 const foundersData: ProfileCardProps[] = [
   {
     name: 'Mr. Aditya Jaglan',
-    title: 'Founder of Haryana Job Alert',
+    title: 'Founder of Jai Hind result',
     description: "I started this platform because at my time, I didn't have the right knowledge and guideance about jobs and career. Now, You can use this platform to get your Dream JOB",
     profileImageUrl: '/aj.png',
-    logoUrl: '/logo.jpg',
+    logoUrl: '/jai-hind-title.png',
     instagramUrl: '#',
     bgColor: 'bg-gradient-to-br from-emerald-500 to-green-700',
     nameColor: 'text-yellow-300',
@@ -31,7 +31,7 @@ const foundersData: ProfileCardProps[] = [
     title: 'Founder of Value Plus Campus, Jind Haryana',
     description: "India's Premier Online Government Job Coaching Platform! We've been helping Students prepare for Government Jobs for 12 years. We offer both Online and Offline coaching.",
     profileImageUrl: '/js.png',
-    logoUrl: '/logo.jpg',
+    logoUrl: '/jai-hind-title.png',
     instagramUrl: '#',
     bgColor: 'bg-gradient-to-br from-red-500 to-rose-700',
     nameColor: 'text-white',

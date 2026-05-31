@@ -30,7 +30,7 @@ export default function AboutPage() {
                                 Sarkari results
                             </h3>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                Haryana Job Alert is among the most popular websites in India that provides
+                                Jai Hind result is among the most popular websites in India that provides
                                 details about Sarkari work exams, Sarkari result 2025, and other related updates.
                                 It is a trusted portal where many job seekers find information about government
                                 job openings, admit cards, exam schedules, and results.

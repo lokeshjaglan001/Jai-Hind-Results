@@ -165,7 +165,7 @@ export default function TestResultPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Back Button */}
         <div className="mb-6">
           <Button variant="ghost" asChild>

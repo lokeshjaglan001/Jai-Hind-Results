@@ -36,8 +36,8 @@ export default function Footer() {
           <div className="md:col-span-5 lg:col-span-6">
             {/* Kept your brand logo and name */}
             <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.jpg" alt="Logo" height={40} width={40} className="w-10 h-10 rounded-full" />
-                <h2 className="text-2xl font-bold text-white">Haryana Job Alert</h2>
+                <img src="/jai-hind-title.jpeg" alt="Logo" height={40} width={40} className="w-10 h-10 rounded-full" />
+                <h2 className="text-2xl font-bold text-white">Jai Hind result</h2>
             </div>
             {/* Added description from image */}
             <p className="text-gray-400 text-xs max-w-xs">
@@ -120,7 +120,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
             {/* Copyright text styled like image, but using your brand */}
             <p className="text-xs text-white text-center sm:text-left">
-              Copyright @Haryana Job Alert – All Rights Reserved © 2025
+              Copyright @Jai Hind result – All Rights Reserved © 2025
             </p>
             {/* Kept your developer credit on the right */}
             {/* <div className="flex-shrink-0">

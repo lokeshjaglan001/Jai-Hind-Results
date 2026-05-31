@@ -76,7 +76,7 @@ export default function CourseSection({ courses = [] }: CourseSectionProps) {
                 {course.authors && course.authors.length > 0 && (
                   <div className="flex items-center gap-2 mb-4">
                       <Image 
-                        src={course.authors[0].avatar_url || '/logo.jpg'} 
+                        src={course.authors[0].avatar_url || '/jai-hind-title.png'} 
                         alt={course.authors[0].full_name} 
                         className="w-7 h-7 rounded-full" 
                         width={40} 

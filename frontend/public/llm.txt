@@ -1,11 +1,11 @@
-# The Haryana Job Alert
+# The Jai Hind result
 **Site:** https://theharyanajobalert.com  
 **Primary language:** hi-IN (Hindi) — / **Secondary language:** en-US (English)  
 **Maintainer:** Softricity Pvt Ltd (on behalf of TheHaryanaJobAlert)  
 **Contact:** admin@theharyanajobalert.com
 
 ## Short description
-The Haryana Job Alert aggregates latest government & private job notices, admit card updates, result announcements, and application deadlines relevant to Haryana state job seekers. Content includes verified job posts, exam schedules, application links, and short how-to guides for application processes.
+The Jai Hind result aggregates latest government & private job notices, admit card updates, result announcements, and application deadlines relevant to Haryana state job seekers. Content includes verified job posts, exam schedules, application links, and short how-to guides for application processes.
 
 ## Sitemap
 https://theharyanajobalert.com/sitemap.xml

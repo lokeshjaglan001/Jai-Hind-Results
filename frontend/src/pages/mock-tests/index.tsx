@@ -6,7 +6,7 @@ import Footer from "@/components/shared/Footer";
 import { ArrowUpRight, User, Search, Filter, X } from "lucide-react";
 import BannerHeader from "@/components/shared/BannerHeader";
 import Image from "next/image";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 export type MockSeries = {
   id: string;
@@ -70,6 +70,55 @@ export const getStaticProps: GetStaticProps = async () => {
 const MockTestsHomePage: NextPage<MockTestsHomePageProps> = ({ series, headerCategories, carouselItems }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [countdown, setCountdown] = useState({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
+
+useEffect(() => {
+  const getNextSaturday = () => {
+    const now = new Date();
+
+    const target = new Date(now);
+
+    const daysUntilSaturday = (6 - now.getDay() + 7) % 7 || 7;
+
+    target.setDate(now.getDate() + daysUntilSaturday);
+    target.setHours(0, 0, 0, 0);
+
+    return target;
+  };
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const target = getNextSaturday().getTime();
+
+    const distance = target - now;
+
+    setCountdown({
+      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours: Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+      ),
+      minutes: Math.floor(
+        (distance % (1000 * 60 * 60)) /
+          (1000 * 60)
+      ),
+      seconds: Math.floor(
+        (distance % (1000 * 60)) / 1000
+      ),
+    });
+  };
+
+  updateCountdown();
+
+  const timer = setInterval(updateCountdown, 1000);
+
+  return () => clearInterval(timer);
+}, []);
 
   const getLogoText = (categoryName?: string) => {
     if (!categoryName) return 'MT';
@@ -142,6 +191,60 @@ const MockTestsHomePage: NextPage<MockTestsHomePageProps> = ({ series, headerCat
             Choose from our comprehensive collection of mock test series
           </p>
         </div>
+        <div className="mb-10">
+  <div className="rounded-3xl border border-indigo-100 bg-gradient-to-r from-indigo-50 via-white to-purple-50 p-6 md:p-8 shadow-sm">
+
+    <div className="text-center mb-6">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+        Upcoming Saturday Mock Test Starts In
+      </h2>
+
+      <p className="text-gray-600 mt-2">
+        Get ready for the weekly challenge and test your preparation.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
+
+      <div className="bg-white rounded-2xl border border-gray-100 p-4 md:p-6 text-center shadow-sm">
+        <div className="text-3xl md:text-5xl font-bold text-indigo-600">
+          {countdown.days}
+        </div>
+        <div className="text-xs md:text-sm text-gray-500 mt-2">
+          Days
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl border border-gray-100 p-4 md:p-6 text-center shadow-sm">
+        <div className="text-3xl md:text-5xl font-bold text-indigo-600">
+          {countdown.hours}
+        </div>
+        <div className="text-xs md:text-sm text-gray-500 mt-2">
+          Hours
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl border border-gray-100 p-4 md:p-6 text-center shadow-sm">
+        <div className="text-3xl md:text-5xl font-bold text-indigo-600">
+          {countdown.minutes}
+        </div>
+        <div className="text-xs md:text-sm text-gray-500 mt-2">
+          Minutes
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl border border-gray-100 p-4 md:p-6 text-center shadow-sm">
+        <div className="text-3xl md:text-5xl font-bold text-indigo-600">
+          {countdown.seconds}
+        </div>
+        <div className="text-xs md:text-sm text-gray-500 mt-2">
+          Seconds
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
         {/* Search and Filter Section */}
         <div className="mb-8 space-y-4">

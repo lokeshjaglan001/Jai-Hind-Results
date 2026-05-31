@@ -170,7 +170,7 @@ export function AuthDialog({
               <div className="flex justify-center sm:hidden">
                 <img
                   src="/india.png"
-                  alt="Haryana Job Alert Logo"
+                  alt="Jai Hind result Logo"
                   className="w-16"
                 />
               </div>

@@ -9,8 +9,13 @@ import arrow from "@/assets/arrow.png";
 import whiteArrow from "@/assets/white-arrow.jpg";
 import wp from "@/assets/wp.png";
 import wpIcon from "@/assets/wp-icon.png";
-import bgFlagLeft from "@/assets/bgFlagLeft.png";
-import bgFlagRight from "@/assets/bgFlagRight.png";
+import freedomFighters from "@/assets/right-freedom-fighter-img.png";
+import {
+  BriefcaseBusiness,
+  Users,
+  FileText,
+  Trophy,
+} from "lucide-react";
 
 interface TopLinksSectionProps {
   categories: Category[];
@@ -23,204 +28,276 @@ export default function TopLinksSection({
   const { user } = useAuth();
 
   return (
-    <section className="bg-white pb-2 px-2 sm:px-6 lg:px-8 mt-0 overflow-hidden">
+    <section className="bg-[#ffffff] px-4 sm:px-3 lg:px-6 overflow-hidden">
 
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto">
 
-        {/* HEADING */}
-        <div className="flex items-center justify-center mb-3 sm:mb-2 sm:mt-6 px-4 sm:px-0 relative z-10">
+        <div className="grid lg:grid-cols-[0.95fr_1.25fr] gap-8 lg:gap-16 items-center py-8 lg:py-20">
+          {/* LEFT SIDE */}
+          <div>
 
-          <h1 className="text-lg sm:text-2xl font-bold text-gray-800 tracking-tight leading-snug">
-            Haryana <span className="text-red-500">Job</span> Alert is a{" "}
-            <span className="text-red-500">FREE</span> Website to get
-          </h1>
+            <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold leading-tight text-gray-900">
+              Your Journey to a
+              <span className="block text-green-600">
+                Government Job
+              </span>
+              Starts Here
+            </h1>
 
-        </div>
+            <p className="mt-6 text-lg text-gray-600 max-w-xl">
+              Get the latest job alerts, admit cards, results,
+              answer keys, documents, government schemes and
+              everything you need for your career in one place.
+            </p>
 
-        {/* LINKS + FLAGS */}
-        <div className="relative flex justify-center items-center w-full py-6 sm:py-8 min-h-[170px] sm:min-h-[220px]">
+            {/* FEATURE CHIPS */}
+            <div className="flex flex-wrap gap-3 mt-8">
 
-          {/* LEFT FLAG */}
-          <div className="absolute left-[-95px] sm:left-[-170px] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0">
+              {categories.slice(0, 8).map((category) => (
 
-            <Image
-              src={bgFlagLeft}
-              alt="Left BG Flag"
-              width={220}
-              height={220}
-              className="object-contain sm:w-[360px] sm:h-[360px]"
-            />
+                <Link
+                  key={category.id}
+                  href={`/category/${category.name
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  prefetch={false}
+                >
 
-          </div>
+                  <div className="flex items-center gap-2 bg-white border rounded-xl px-4 py-2 shadow-sm hover:shadow-md transition-all">
 
-          {/* RIGHT FLAG */}
-          <div className="absolute right-[-95px] sm:right-[-170px] top-1/2 -translate-y-1/2 pointer-events-none select-none z-0">
+                    <CheckCircle2 className="w-4 h-4 text-green-500" />
 
-            <Image
-              src={bgFlagRight}
-              alt="Right BG Flag"
-              width={220}
-              height={220}
-              className="object-contain sm:w-[360px] sm:h-[360px]"
-            />
+                    <span className="text-sm font-medium text-gray-700">
+                      {category.name}
+                    </span>
 
-          </div>
+                  </div>
 
-          {/* CATEGORY LINKS */}
-          <div className="relative z-10 max-w-3xl flex flex-wrap gap-x-4 gap-y-3 justify-center text-center px-2">
+                </Link>
 
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/category/${category.name
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
-                passHref
-                legacyBehavior
-                prefetch={false}
-              >
+              ))}
 
-                <span className="inline-flex items-center justify-center text-gray-700 font-semibold hover:scale-105 hover:text-gray-900 transition-transform duration-200">
+            </div>
 
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-1.5 flex-shrink-0" />
+            {/* BUTTONS */}
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
 
-                  <span className="whitespace-nowrap underline decoration-gray-300 transition-all text-[13px] sm:text-sm text-center">
-                    {category.name}
+              {user?.id ? (
+
+                <button
+                  className="group bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:scale-105 duration-300"
+                  onClick={() =>
+                  (window.location.href =
+                    user.role === "admin"
+                      ? "/admin"
+                      : "/dashboard")
+                  }
+                >
+
+                  <span className="px-5">
+                    Dashboard
                   </span>
 
-                  <ArrowUpRight className="min-w-3 min-h-3 w-3 h-3 sm:w-4 sm:h-4 text-gray-400 ml-1" />
+                  <span className="w-12 h-12 rounded-lg bg-green-400 flex items-center justify-center">
 
-                </span>
+                    <Image
+                      src={arrow}
+                      width={48}
+                      height={48}
+                      alt="arrow"
+                      className="rounded-lg"
+                    />
 
-              </Link>
-            ))}
+                  </span>
+
+                </button>
+
+              ) : (
+
+                <button
+                  className="group bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:scale-105 duration-300"
+                  onClick={() => setShowSignupForm(true)}
+                >
+
+                  <span className="px-5">
+                    Login / Register
+                  </span>
+
+                  <span className="w-12 h-12 rounded-lg bg-green-400 flex items-center justify-center">
+
+                    <Image
+                      src={arrow}
+                      width={48}
+                      height={48}
+                      alt="arrow"
+                      className="rounded-lg"
+                    />
+
+                  </span>
+
+                </button>
+
+              )}
+
+              <a
+                href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white border rounded-xl shadow-md px-5 py-3 flex items-center gap-3 font-semibold hover:scale-105 duration-300"
+              >
+
+                <Image
+                  src={wp}
+                  alt="WhatsApp"
+                  width={28}
+                  height={28}
+                />
+
+                Join WhatsApp
+
+              </a>
+
+            </div>
+
+            {/* TRUST TEXT */}
+            <div className="flex flex-wrap gap-6 mt-8 text-sm font-medium text-gray-600">
+
+              <span>✓ 100% Free</span>
+
+              <span>✓ No Registration Fee</span>
+
+              <span>✓ No Hidden Charges</span>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <div className="hidden lg:flex relative justify-center items-center">
+
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-orange-200/40
+                via-transparent
+                to-green-200/40
+                blur-3xl
+                scale-125
+                -z-10
+              "
+            />
+
+            <div
+              className="
+                relative
+                w-full
+                lg:scale-[1.25]
+                lg:translate-x-8
+              "
+            >
+
+              <Image
+                src={freedomFighters}
+                alt="Freedom Fighters"
+                priority
+                className="
+                  w-full
+                  h-auto
+                  object-contain
+                  select-none
+                  pointer-events-none
+                "
+              />
+
+              <div
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  right-0
+                  h-32
+                  bg-gradient-to-b
+                  from-transparent
+                  via-[#ffffff]
+                  to-[#ffffff]
+                "
+              />
+
+            </div>
 
           </div>
 
         </div>
 
-        {/* BOTTOM TEXT */}
-        <p className="mt-2 hidden sm:block text-gray-800 font-semibold text-md text-center gap-2 relative z-10">
+        {/* STATS */}
+        <div className="mt-5 lg:mt-5 pb-15">
+          <div className="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
 
-          You can freely use this website without registration or login
+              {/* Stat 1 */}
+              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-green-50 flex items-center justify-center shrink-0">
+                  <BriefcaseBusiness className="w-6 h-6 lg:w-8 lg:h-8 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
+                    500+
+                  </h3>
+                  <p className="text-sm lg:text-base text-gray-500 mt-1">
+                    Government Jobs
+                  </p>
+                </div>
+              </div>
 
-          <span className="relative inline-flex items-center justify-center px-2.5 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full ml-2">
+              {/* Stat 2 */}
+              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0">
+                  <Users className="w-6 h-6 lg:w-8 lg:h-8 text-orange-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
+                    10k+
+                  </h3>
+                  <p className="text-sm lg:text-base text-gray-500 mt-1">
+                    Students Enrolled
+                  </p>
+                </div>
+              </div>
 
-            <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-red-600 animate-ping"></span>
+              {/* Stat 3 */}
+              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <FileText className="w-6 h-6 lg:w-8 lg:h-8 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
+                    100+
+                  </h3>
+                  <p className="text-sm lg:text-base text-gray-500 mt-1">
+                    Admit Cards
+                  </p>
+                </div>
+              </div>
 
-            LIVE
+              {/* Stat 4 */}
+              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-yellow-50 flex items-center justify-center shrink-0">
+                  <Trophy className="w-6 h-6 lg:w-8 lg:h-8 text-yellow-500" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
+                    200+
+                  </h3>
+                  <p className="text-sm lg:text-base text-gray-500 mt-1">
+                    Results Declared
+                  </p>
+                </div>
+              </div>
 
-          </span>
-
-        </p>
-
-        {/* BUTTONS */}
-        <div className="mt-5 hidden sm:flex items-center justify-center gap-4 relative z-10">
-
-          {user?.id ? (
-            <button
-              className="shine group w-full sm:w-auto bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:shadow-lg cursor-pointer hover:scale-105 duration-300 transition-transform hover:bg-gradient-to-b hover:from-[#1c1e47] hover:via-[#2b2d6c] hover:to-[#34387e]"
-              onClick={() =>
-                (window.location.href =
-                  user.role === "admin"
-                    ? "/admin"
-                    : "/dashboard")
-              }
-            >
-
-              <span className="sm:text-sm text-sm pl-3 text-nowrap">
-                Dashboard
-              </span>
-
-              <span className="ml-4 w-10 h-10 rounded-lg bg-green-400 group-hover:bg-white object-cover flex items-center justify-center">
-
-                <Image
-                  src={arrow}
-                  width={48}
-                  height={48}
-                  alt="arrow"
-                  className="rounded-lg group-hover:hidden block"
-                />
-
-                <Image
-                  src={whiteArrow}
-                  width={48}
-                  height={48}
-                  alt="arrow"
-                  className="rounded-lg group-hover:block hidden"
-                />
-
-              </span>
-
-            </button>
-          ) : (
-            <button
-              className="shine group w-full sm:w-auto bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:shadow-lg cursor-pointer hover:scale-105 duration-300 transition-transform hover:bg-gradient-to-b hover:from-[#1c1e47] hover:via-[#2b2d6c] hover:to-[#34387e]"
-              onClick={() => setShowSignupForm(true)}
-            >
-
-              <span className="sm:text-sm text-sm pl-3 text-nowrap">
-                Login / Register
-              </span>
-
-              <span className="ml-4 w-10 h-10 rounded-lg bg-green-400 group-hover:bg-white object-cover flex items-center justify-center">
-
-                <Image
-                  src={arrow}
-                  width={48}
-                  height={48}
-                  alt="arrow"
-                  className="rounded-lg group-hover:hidden block"
-                />
-
-                <Image
-                  src={whiteArrow}
-                  width={48}
-                  height={48}
-                  alt="arrow"
-                  className="rounded-lg group-hover:block hidden"
-                />
-
-              </span>
-
-            </button>
-          )}
-
-          <button className="shine w-full sm:w-auto bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md p-1 flex items-center justify-between font-semibold text-white hover:shadow-lg transition-transform cursor-pointer hover:scale-105 duration-300 hover:bg-gradient-to-b hover:from-[#1c1e47] hover:via-[#2b2d6c] hover:to-[#34387e]">
-
-            <a
-              href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-between"
-            >
-
-              <span className="text-sm pl-3 text-nowrap">
-                Join WhatsApp
-              </span>
-
-              <Image
-                src={wp}
-                alt="Contact avatar"
-                className="w-10 h-10 rounded-lg ml-4 group-hover:hidden block"
-                width={32}
-                height={32}
-                placeholder="blur"
-              />
-
-              <Image
-                src={wpIcon}
-                alt="Contact avatar"
-                className="w-10 h-10 p-1 rounded-lg ml-4 group-hover:block hidden"
-                width={32}
-                height={32}
-                placeholder="blur"
-              />
-
-            </a>
-
-          </button>
-
+            </div>
+          </div>
         </div>
 
       </div>
@@ -233,3 +310,4 @@ export default function TopLinksSection({
     </section>
   );
 }
+

@@ -12,8 +12,8 @@ interface Faq {
 const faqData: Faq[] = [
   {
     id: 1,
-    question: 'What is Haryana Job Alert?',
-    answer: 'Haryana Job Alert is a dedicated online portal that provides the latest information on government job vacancies (Sarkari Naukri), exam results, admit cards, answer keys, and other related updates primarily for the state of Haryana, as well as for central government positions.'
+    question: 'What is Jai Hind result?',
+    answer: 'Jai Hind result is a dedicated online portal that provides the latest information on government job vacancies (Sarkari Naukri), exam results, admit cards, answer keys, and other related updates primarily for the state of Haryana, as well as for central government positions.'
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ const faqData: Faq[] = [
   },
   {
     id: 3,
-    question: 'Is Haryana Job Alert free to use?',
-    answer: 'Yes, absolutely. All the information provided on Haryana Job Alert, including job notifications, results, and study materials, is completely free for all users. No registration or subscription is required to access the content.'
+    question: 'Is Jai Hind result free to use?',
+    answer: 'Yes, absolutely. All the information provided on Jai Hind result, including job notifications, results, and study materials, is completely free for all users. No registration or subscription is required to access the content.'
   }
 ];
 

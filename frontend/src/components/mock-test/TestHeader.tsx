@@ -98,7 +98,7 @@ export default function TestHeader({
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Your Razorpay Key ID
         amount: order.amount,
         currency: "INR",
-        name: "Haryana Job Alert",
+        name: "Jai Hind result",
         description: `Purchase: ${order.series_title}`,
         order_id: order.order_id,
         handler: function (response: any) {
@@ -244,7 +244,7 @@ export default function TestHeader({
             <div className="bg-gradient-to-b from-[#1c1e47] via-[#2b2d6c] to-[#34387e] p-4 flex flex-col items-center rounded-2xl min-h-[550px] relative">
               <img src="/card-bg.jpg" alt="" className="w-full absolute top-0" />
               <img src="/bow-ribbon.jpg" alt="" className='absolute -right-10 -top-5 w-35'/>
-              <img src="/header-logo.jpg" alt="" className="w-12 h-12 object-cover rounded-xl z-50 mt-2" />
+              <img src="/header-jai-hind-title.png" alt="" className="w-12 h-12 object-cover rounded-xl z-50 mt-2" />
               <h1 className="text-center text-2xl font-semibold z-10 text-white mt-3">
                 Haryana <span className="text-[#f7f900]">
                   Job Alert
@@ -270,7 +270,7 @@ export default function TestHeader({
                   </div>
                   <div className="w-1/2">
                     <div className="text-white text-xs px-3">
-                      Use <span className="text-[#f7f900] font-semibold">Haryana Job Alert</span> Platform to practice for exams using mock tests.
+                      Use <span className="text-[#f7f900] font-semibold">Jai Hind result</span> Platform to practice for exams using mock tests.
                     </div>
                   </div>
                 </div>

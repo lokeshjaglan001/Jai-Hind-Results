@@ -346,8 +346,8 @@ const SingleFilePage: React.FC<SingleFilePageProps> = ({ file: initialFile }) =>
       <main className="container mx-auto sm:px-4 p-0 py-8 max-w-5xl">
         <div className="flex justify-between items-center mb-4">
           <Link href="/" className="flex justify-center items-center gap-2 text-gray-300 p-1 pr-3 rounded-full border">
-            <img src="/logo.jpg" alt="" className='w-8 h-8 rounded-full' />
-            <span className="text-md font-medium">Haryana Job Alerts</span>
+            <img src="/jai-hind-title.png" alt="" className='w-8 h-8 rounded-full' />
+            <span className="text-md font-medium">Jai Hind results</span>
           </Link>
           <div className="flex items-center gap-2">
             {
@@ -453,7 +453,7 @@ const SingleFilePage: React.FC<SingleFilePageProps> = ({ file: initialFile }) =>
                     // Show purchase form trigger for non-logged users
                     <div>
                       <div className="mb-4">
-                        <p className="text-sm text-gray-600 mb-4">To purchase this form you have to login or register on Haryana Job Alert</p>
+                        <p className="text-sm text-gray-600 mb-4">To purchase this form you have to login or register on Jai Hind result</p>
                       </div>
 
                       {/* Price Summary */}
@@ -554,7 +554,7 @@ const SingleFilePage: React.FC<SingleFilePageProps> = ({ file: initialFile }) =>
                     // Logged-in user purchase form
                     <div>
                       <div className="mb-4">
-                        <p className="text-sm text-gray-600 mb-4">To purchase this form you have to login or register on Haryana Job Alert</p>
+                        <p className="text-sm text-gray-600 mb-4">To purchase this form you have to login or register on Jai Hind result</p>
                         <Input
                           value={user.email}
                           disabled

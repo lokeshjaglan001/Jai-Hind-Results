@@ -207,8 +207,8 @@ const CoursePage: NextPage<CoursePageProps> = ({ course }) => {
     return (
         <div className="bg-white">
             <Head>
-                 <title>{`${course.title} | Haryana Job Alert`}</title>
-                 <meta name="description" content={course.description || `Learn about ${course.title} on Haryana Job Alert.`} />
+                 <title>{`${course.title} | Jai Hind result`}</title>
+                 <meta name="description" content={course.description || `Learn about ${course.title} on Jai Hind result.`} />
             </Head>
 
             <Header />

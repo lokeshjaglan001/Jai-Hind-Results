@@ -11,6 +11,7 @@ import { HeroUIProvider } from "@heroui/react";
 import { Poppins, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { ThirdPartyScripts } from "@/components/ThirdPartyScripts";
+import { Outfit } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,6 +24,10 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 
 // This component handles the protection logic
@@ -112,7 +117,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </AdminAuthGuard>
         </HeroUIProvider>
       ) : (
-        <main className="font-sans">
+        <main className={outfit.className}>
           <Component {...pageProps} />
         </main>
       )}

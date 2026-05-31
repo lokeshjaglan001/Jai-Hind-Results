@@ -22,8 +22,8 @@ export default function PrivacyPolicyPage() {
                                 1. Introduction
                             </h3>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                Welcome to Haryana Job Alert ("we," "us," or "our"). We are committed to protecting the privacy of our visitors. This Privacy Policy outlines the types of personal information that is received and collected by Haryana Job Alert (the "Website") and how it is used.
-                                This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they share and/or collect on Haryana Job Alert. This policy is not applicable to any information collected offline or via channels other than this website.
+                                Welcome to Jai Hind result ("we," "us," or "our"). We are committed to protecting the privacy of our visitors. This Privacy Policy outlines the types of personal information that is received and collected by Jai Hind result (the "Website") and how it is used.
+                                This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they share and/or collect on Jai Hind result. This policy is not applicable to any information collected offline or via channels other than this website.
                                 Our website is operated by SOFTRICITY Pvt Ltd.
                             </p>
                         </div>
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
                                 B. Non-Personal Information & Log Files
                             </h4>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed mb-2">
-                                Haryana Job Alert follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes:
+                                Jai Hind result follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes:
                             </p>
                             <ul className="list-disc list-inside md:text-lg text-sm text-gray-600 leading-relaxed space-y-1 pl-4">
                                 <li>Internet Protocol (IP) addresses</li>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
                                 C. Cookies and Web Beacons
                             </h4>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                Like any other website, Haryana Job Alert uses "cookies." These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+                                Like any other website, Jai Hind result uses "cookies." These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
                             </p>
                         </div>
 
@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
                                 <li>Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.</li>
                             </ul>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                Haryana Job Alert has no access to or control over these cookies that are used by third-party advertisers. We advise you to consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices.
+                                Jai Hind result has no access to or control over these cookies that are used by third-party advertisers. We advise you to consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices.
                             </p>
                         </div>
 

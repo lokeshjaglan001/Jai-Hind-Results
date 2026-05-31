@@ -32,7 +32,7 @@ const FancyContainer: React.FC<FancyContainerProps> = ({ className = "" }) => {
 
         <div className="absolute -bottom-3 left-3 flex justify-between items-center">
           <div className="rounded-full p-4">
-              <img src="/logo.jpg" alt="" className="w-15" />
+              <img src="/jai-hind-title.png" alt="" className="w-15" />
           </div>
           <div className="rounded-full flex justify-center items-center bg-black w-15 h-15 z-90">
             <a href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i">
@@ -47,7 +47,7 @@ const FancyContainer: React.FC<FancyContainerProps> = ({ className = "" }) => {
           <div className="h-full flex flex-col items-start md:items-end sm:items-end">
               <div>
                   <h1 className="text-2xl sm:text-4xl font-bold">Mr. Aditya Jaglan</h1>
-              <p className="max-w-3xl text-xs sm:text-md">Founder of Haryana Job Alert</p>
+              <p className="max-w-3xl text-xs sm:text-md">Founder of Jai Hind result</p>
               <p
                   className="text-sm sm:text-lg max-w-xl mt-3"
                   style={{
@@ -93,7 +93,7 @@ const FancyContainer: React.FC<FancyContainerProps> = ({ className = "" }) => {
         <div className="absolute top-5 -right-3 bg-black p-4 rounded-full z-90">
           <a href="https://www.instagram.com/value_plus_campus_2611" target="_blank" rel="noopener noreferrer" className="flex">
             <span className="hidden">
-              Haryana Job Alert
+              Jai Hind result
             </span>
             <Instagram size={30} color="white" />
           </a>
@@ -101,7 +101,7 @@ const FancyContainer: React.FC<FancyContainerProps> = ({ className = "" }) => {
 
         <div className="absolute -bottom-3 left-3 flex justify-between items-center">
           <div className="rounded-full p-4">
-              <img src="/logo.jpg" alt="" className="w-15" />
+              <img src="/jai-hind-title.png" alt="" className="w-15" />
           </div>
           <div className="rounded-full flex justify-center items-center bg-black w-15 h-15 z-90">
             <a href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i">

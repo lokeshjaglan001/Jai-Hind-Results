@@ -142,7 +142,6 @@ export default function MidCardSection({
 }: MidCardSectionProps) {
   const categoryOrder = [
     "Latest Jobs",
-    "Yojna",
     "Results",
     "Admit Cards",
     "Documents",
@@ -159,6 +158,8 @@ export default function MidCardSection({
 
     return indexA - indexB;
   });
+
+  console.log(sortedCategories);
 
   return (
     <section className="bg-white pb-12 pt-0 sm:pt-5 px-2 sm:px-0">

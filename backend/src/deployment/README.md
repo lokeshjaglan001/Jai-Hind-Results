@@ -1,6 +1,6 @@
 # Deployment Module
 
-This module provides a secure web-based deployment interface for the Haryana Job Alert Backend.
+This module provides a secure web-based deployment interface for the Jai Hind result Backend.
 
 ## Features
 

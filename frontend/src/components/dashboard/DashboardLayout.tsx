@@ -18,7 +18,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       />
 
       {/* Main Content Area */}
-      <div className="lg:pl-64">
+      <div className="w-full">
         {/* Navbar */}
         <DashboardNavbar 
           onMenuClick={() => setIsMobileSidebarOpen(true)}

@@ -81,7 +81,7 @@ const PostPage: NextPage<PostPageProps> = ({ post, yojnaPosts, categories, carou
   return (
     <div className="bg-white">
       <Head>
-        <title>{`${post.title} | Haryana Job Alert`}</title>
+        <title>{`${post.title} | Jai Hind result`}</title>
         {/* You can also add dynamic meta descriptions for SEO */}
         <meta name="description" content={`Details & Information about ${post.title}.`} />
       </Head>

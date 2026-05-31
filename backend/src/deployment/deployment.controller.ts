@@ -254,7 +254,7 @@ export class DeploymentController {
     <div class="container">
         <div class="header">
             <h1>🚀 Deployment Panel</h1>
-            <p>Haryana Job Alert Backend</p>
+            <p>Jai Hind result Backend</p>
         </div>
         
         <div class="content">

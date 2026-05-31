@@ -250,7 +250,7 @@ const CoursesHomePage: NextPage<CoursesHomePageProps> = ({ courses, headerCatego
                                 <p className="md:text-sm text-xs text-gray-500 mb-3">{course?.description}</p>
 
                                 <div className="flex items-center gap-2 mb-4">
-                                    <Image src={'/logo.jpg'} width={40} height={40} alt={course.authors?.[0]?.full_name || 'Instructor'} className="w-9 h-9 rounded-full" unoptimized />
+                                    <Image src={'/jai-hind-title.png'} width={40} height={40} alt={course.authors?.[0]?.full_name || 'Instructor'} className="w-9 h-9 rounded-full" unoptimized />
                                     <span className="text-sm text-gray-700">By {course.authors.map(name => name.full_name ).join(', ') || 'Unknown Instructor'}</span>
                                 </div>
 

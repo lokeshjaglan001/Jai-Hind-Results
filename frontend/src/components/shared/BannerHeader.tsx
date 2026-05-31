@@ -63,11 +63,11 @@ export default function BannerHeader() {
         <div className="bg-black text-white py-1 overflow-hidden whitespace-nowrap text-sm">
           <div className="marquee-content flex">
             {/* Repeated 5 times for smooth loop */}
-            <p className="px-4">You can Now Give MOCK TESTS on Haryana Job Alert for FREE.</p>
-            <p className="px-4">You can Now Give MOCK TESTS on Haryana Job Alert for FREE.</p>
-            <p className="px-4">You can Now Give MOCK TESTS on Haryana Job Alert for FREE.</p>
-            <p className="px-4">You can Now Give MOCK TESTS on Haryana Job Alert for FREE.</p>
-            <p className="px-4">You can Now Give MOCK TESTS on Haryana Job Alert for FREE.</p>
+            <p className="px-4">You can Now Give MOCK TESTS on Jai Hind result for FREE.</p>
+            <p className="px-4">You can Now Give MOCK TESTS on Jai Hind result for FREE.</p>
+            <p className="px-4">You can Now Give MOCK TESTS on Jai Hind result for FREE.</p>
+            <p className="px-4">You can Now Give MOCK TESTS on Jai Hind result for FREE.</p>
+            <p className="px-4">You can Now Give MOCK TESTS on Jai Hind result for FREE.</p>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function BannerHeader() {
           <Link href="/" className="block">
             <Image
               src="/Header2.png" // <-- ASSUMING YOU SAVED YOUR IMAGE HERE
-              alt="Haryana Job Alert Banner"
+              alt="Jai Hind result Banner"
               width={1200}  // <-- Adjust to your image's width
               height={200} // <-- Adjust to your image's height
               layout="responsive"

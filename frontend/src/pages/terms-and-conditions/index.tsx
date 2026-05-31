@@ -22,7 +22,7 @@ export default function TermsAndConditionsPage() {
                                 1. Introduction
                             </h3>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                Welcome to Haryana Job Alert ("we," "us," or "our"). These Terms and Conditions govern your use of our website (the "Website"), operated by SOFTRICITY Pvt Ltd. By accessing or using our Website, you agree to be bound by these Terms and Conditions in full. If you disagree with any part of these terms, you must not use our website.
+                                Welcome to Jai Hind result ("we," "us," or "our"). These Terms and Conditions govern your use of our website (the "Website"), operated by SOFTRICITY Pvt Ltd. By accessing or using our Website, you agree to be bound by these Terms and Conditions in full. If you disagree with any part of these terms, you must not use our website.
                             </p>
                         </div>
 
@@ -57,7 +57,7 @@ export default function TermsAndConditionsPage() {
                                 4. Accuracy of Information (Disclaimer)
                             </h3>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed mb-2">
-                                The information on Haryana Job Alert (job postings, deadlines, salaries, eligibility, etc.) is collected from various online and offline sources, including official government websites and news reports.
+                                The information on Jai Hind result (job postings, deadlines, salaries, eligibility, etc.) is collected from various online and offline sources, including official government websites and news reports.
                             </p>
                             <ul className="list-disc list-inside md:text-lg text-sm text-gray-600 leading-relaxed space-y-1 pl-4">
                                 <li>We do not guarantee the accuracy, completeness, or timeliness of any information on this Website.</li>
@@ -103,7 +103,7 @@ export default function TermsAndConditionsPage() {
                                 8. Indemnification
                             </h3>
                             <p className="md:text-lg text-sm text-gray-600 leading-relaxed">
-                                You agree to indemnify and hold Haryana Job Alert and its employees, and agents harmless from and against all liabilities, legal fees, damages, losses, costs, and other expenses in relation to any claims or actions brought against us arising out of any breach by you of these Terms and Conditions or other liabilities arising out of your use of this Website.
+                                You agree to indemnify and hold Jai Hind result and its employees, and agents harmless from and against all liabilities, legal fees, damages, losses, costs, and other expenses in relation to any claims or actions brought against us arising out of any breach by you of these Terms and Conditions or other liabilities arising out of your use of this Website.
                             </p>
                         </div>
 

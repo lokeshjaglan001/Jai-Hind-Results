@@ -169,7 +169,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
   return (
     <div className="bg-white w-full min-h-screen">
       <Head>
-        <title>{`${category.name} | Haryana Job Alert`}</title>
+        <title>{`${category.name} | Jai Hind result`}</title>
         <meta
           name="description"
           content={category.description || `Browse all posts in ${category.name} category`}
@@ -177,7 +177,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
       </Head>
 
       <Header preloadedCategories={categories} preloadedCarousel={carouselItems} />
-      <main className="max-w-6xl mx-auto md:mt-12 grid grid-cols-1 lg:grid-cols-4 gap-8 px-4 mb-10">
+      <main className="max-w-6xl mx-auto md:mt-12 grid gap-8 px-4 mb-10">
         <div className="lg:col-span-3">
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
@@ -195,76 +195,114 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
             </BreadcrumbList>
           </Breadcrumb>
           
-          <div className="grid grid-cols-2 mb-6">
-            <div className="flex items-center">
-              <div className="flex gap-4 w-full md:w-auto md:flex-shrink-0">
-                <div className="md:flex-1 ml-4 md:ml-0">
-                  <DropdownMenu>
+         {/* Hero Section */}
+<div className="rounded-3xl bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white p-8 md:p-10 mb-8">
+  <div className="max-w-3xl">
+    <h1 className="text-3xl md:text-5xl font-bold mb-3">
+      {category.name}
+    </h1>
 
-                    <DropdownMenuTrigger className="p-3 bg-white rounded-full shadow-lg">
-                      <ListFilter className="w-5 h-5" />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-white p-4 rounded-3xl border-gray-400 shadow-xl z-100">
-                      {allTags.map(tag => (
-                        <DropdownMenuItem
-                          key={tag}
-                          onSelect={() => setSelectedTag(tag)}
-                          className="capitalize px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-2xl"
-                        >
-                          {tag === 'all' ? 'Select All' : tag}
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className="md:flex-1">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger className="p-3 bg-white rounded-full shadow-lg">
-                      <ArrowDownUp className="w-5 h-5" />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-white p-4 rounded-3xl border-gray-400 shadow-xl z-100">
-                      <DropdownMenuItem
-                        onSelect={() => setSortOrder('newest')}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-2xl"
-                      >
-                        Newest
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onSelect={() => setSortOrder('oldest')}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-2xl"
-                      >
-                        Oldest
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onSelect={() => setSortOrder('title-asc')}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-2xl"
-                      >
-                        Title: A-Z
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onSelect={() => setSortOrder('title-desc')}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-2xl"
-                      >
-                        Title: Z-A
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <input
-                id="search-posts"
-                type="search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={`Search in ${category.name}...`}
-                className="w-full px-2 py-2 pl-10 rounded-3xl border border-gray-200 shadow-sm bg-white focus:outline-none focus:ring-1 focus:ring-gray-300 focus:border-gray-300"
-              />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            </div>
-            
-          </div>
+    <p className="text-gray-300 text-base md:text-lg mb-6">
+      Browse the latest updates, notifications, admit cards,
+      results and opportunities related to {category.name}.
+    </p>
+
+    <div className="flex flex-wrap gap-4">
+      <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl">
+        <p className="text-2xl font-bold">{totalPosts}</p>
+        <p className="text-sm text-gray-300">Total Posts</p>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl">
+        <p className="text-2xl font-bold">{allTags.length - 1}</p>
+        <p className="text-sm text-gray-300">Categories</p>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl">
+        <p className="text-2xl font-bold">Daily</p>
+        <p className="text-sm text-gray-300">Updates</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Search */}
+<div className="relative mb-6">
+  <input
+    type="search"
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    placeholder={`Search in ${category.name}...`}
+    className="w-full h-14 rounded-2xl border border-gray-200 bg-white pl-12 pr-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+  />
+
+  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+</div>
+
+{/* Filter Chips */}
+<div className="flex gap-3 overflow-x-auto pb-2 mb-8 scrollbar-hide">
+  {allTags.map((tag) => (
+    <button
+      key={tag}
+      onClick={() => setSelectedTag(tag)}
+      className={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-medium transition-all
+        ${
+          selectedTag === tag
+            ? "bg-black text-white"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+    >
+      {tag === "all" ? "All" : tag}
+    </button>
+  ))}
+</div>
+
+{/* Sort Buttons */}
+<div className="flex flex-wrap gap-3 mb-8">
+  <button
+    onClick={() => setSortOrder("newest")}
+    className={`px-4 py-2 rounded-xl text-sm ${
+      sortOrder === "newest"
+        ? "bg-black text-white"
+        : "bg-gray-100"
+    }`}
+  >
+    Newest
+  </button>
+
+  <button
+    onClick={() => setSortOrder("oldest")}
+    className={`px-4 py-2 rounded-xl text-sm ${
+      sortOrder === "oldest"
+        ? "bg-black text-white"
+        : "bg-gray-100"
+    }`}
+  >
+    Oldest
+  </button>
+
+  <button
+    onClick={() => setSortOrder("title-asc")}
+    className={`px-4 py-2 rounded-xl text-sm ${
+      sortOrder === "title-asc"
+        ? "bg-black text-white"
+        : "bg-gray-100"
+    }`}
+  >
+    A-Z
+  </button>
+
+  <button
+    onClick={() => setSortOrder("title-desc")}
+    className={`px-4 py-2 rounded-xl text-sm ${
+      sortOrder === "title-desc"
+        ? "bg-black text-white"
+        : "bg-gray-100"
+    }`}
+  >
+    Z-A
+  </button>
+</div>
 
           <div>
             {posts.length === 0 ? (
@@ -286,7 +324,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
               </Card>
 
             ) : (
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {processedPosts.map((post, index) => {
                    return (
                     <Link href={`/posts/${post.slug}`} key={post.id} className="block bg-white group transition-all duration-200 rounded-lg shadow-xl border-gray-200 overflow-hidden relative">
@@ -398,11 +436,6 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
             </div>
             )}
 
-          </div>
-        </div>
-        <div className="lg:col-span-1">
-          <div className="mt-12 ml-12">
-            <Sidebar yojnaPosts={yojnaPosts} />
           </div>
         </div>
       </main>

@@ -86,7 +86,7 @@ const CourseSection: React.FC<CoursesHomePageProps> = ({ courses }) => {
 
                                 <div className="flex items-center gap-2 mb-4">
                                     <Image 
-                                      src={'/logo.jpg'} // Added fallback
+                                      src={'/jai-hind-title.png'} // Added fallback
                                       width={40} height={40} 
                                       alt={course.authors?.[0]?.full_name || 'Author'} // Added fallback
                                       className="w-7 h-7 rounded-full" 

@@ -9,7 +9,7 @@ export default function AboutSection() {
         <div className="space-y-8">
           <div className="md:text-lg text-sm text-gray-600 leading-relaxed space-y-6">
             <p>
-              The Haryana Job Alert is India’s reliable platform for fast and accurate Government Job Alerts, Sarkari Exam Notifications, Results, Admit Cards, Offline Forms, Sarkari Yojana updates, and Government Scheme information.
+              The Jai Hind result is India’s reliable platform for fast and accurate Government Job Alerts, Sarkari Exam Notifications, Results, Admit Cards, Offline Forms, Sarkari Yojana updates, and Government Scheme information.
             </p>
             <p>
               We serve students preparing for government exams, aspirants appearing for entrance tests, and every citizen seeking verified scheme-related updates.
@@ -28,7 +28,7 @@ export default function AboutSection() {
               </ul>
             </div>
             <p>
-              At The Haryana Job Alert, we work every day to keep India informed, aware, and empowered.
+              At The Jai Hind result, we work every day to keep India informed, aware, and empowered.
             </p>
           </div>
         </div>
