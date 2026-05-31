@@ -177,7 +177,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
       </Head>
 
       <Header preloadedCategories={categories} preloadedCarousel={carouselItems} />
-      <main className="max-w-6xl mx-auto md:mt-12 grid gap-8 px-4 mb-10">
+      <main className="max-w-6xl mx-auto mt-4 md:mt-12 px-3 md:px-4 mb-10">
         <div className="lg:col-span-3">
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
@@ -196,9 +196,9 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
           </Breadcrumb>
           
          {/* Hero Section */}
-<div className="rounded-3xl bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white p-8 md:p-10 mb-8">
+<div className="rounded-3xl bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white p-5 md:p-10 mb-8">
   <div className="max-w-3xl">
-    <h1 className="text-3xl md:text-5xl font-bold mb-3">
+    <h1 className="text-2xl md:text-5xl font-bold mb-3">
       {category.name}
     </h1>
 
@@ -207,7 +207,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
       results and opportunities related to {category.name}.
     </p>
 
-    <div className="flex flex-wrap gap-4">
+    <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-4">
       <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl">
         <p className="text-2xl font-bold">{totalPosts}</p>
         <p className="text-sm text-gray-300">Total Posts</p>
@@ -328,14 +328,14 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
                 {processedPosts.map((post, index) => {
                    return (
                     <Link href={`/posts/${post.slug}`} key={post.id} className="block bg-white group transition-all duration-200 rounded-lg shadow-xl border-gray-200 overflow-hidden relative">
-                      <div className="flex flex-row justify-between items-end md:items-center gap-4 px-4 py-2 w-full h-full">
+                      <div className="flex flex-col sm:flex-row justify-between gap-3 px-4 py-3 w-full">
                         <div className="flex-grow">
                           <div className="flex items-center gap-2 mb-1">
                             <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-all duration-200">{post.title}</h3>
                           </div>
                           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-1">
                             {post.post_tags && post.post_tags.length > 0 && (
-                              <div className="flex flex-wrap mt-2">
+                              <div className="flex flex-wrap gap-2 mt-2">
                                 {post.post_tags
                                   .map(pt => (pt as any).tags.name)
                                   .map((tagName: string) => {
@@ -354,7 +354,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
                                     return (
                                       <span
                                         key={tagName}
-                                        className={`${cls} px-2 py-1 rounded-full mr-2 mb-2`}
+                                        className={`${cls} px-2 py-1 rounded-full`}
                                       >
                                         {tagName}
                                       </span>
@@ -381,7 +381,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </div>
-                         <div className="inline sm:hidden mb-4">
+                         <div className="inline-flex sm:hidden self-start">
                           <div
                             className='bg-gradient-to-r from-green-600 to-gray-800 text-white font-semibold text-center flex items-center justify-center min-w-7 min-h-7 w-7 h-7 p-1 rounded'
                           >
@@ -398,7 +398,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, posts, yojnaPosts
             
             {/* Pagination Controls */}
             {totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-2 mt-8">
+            <div className="flex flex-wrap justify-center items-center gap-2 mt-8">
               <Button
                 variant="outline"
                 size="sm"

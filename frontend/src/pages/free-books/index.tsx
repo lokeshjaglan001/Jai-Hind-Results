@@ -7,7 +7,8 @@ import { api } from "@/lib/api";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 
-import books from "../../../public/books.png";
+import book from "../../../public/book.png";
+import books from "../../../public/books.png"
 
 export type DownloadableFile = {
   id: string;
@@ -101,7 +102,7 @@ const FilesPage: NextPage<FilesPageProps> = ({ files }) => {
                 {/* Book Cover */}
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src={books}
+                    src={book}
                     alt={file.title}
                     fill
                     className="object-cover"

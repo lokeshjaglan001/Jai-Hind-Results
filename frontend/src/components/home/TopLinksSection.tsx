@@ -15,6 +15,8 @@ import {
   Users,
   FileText,
   Trophy,
+  ArrowRight,
+  LogIn,
 } from "lucide-react";
 
 interface TopLinksSectionProps {
@@ -80,84 +82,42 @@ export default function TopLinksSection({
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-3 mt-6">
+            <div className="flex flex-col gap-3 my-4">
+  {/* Login / Register */}
+  <button
+    onClick={() => setShowSignupForm(true)}
+    className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950 px-5 py-4 transition-all duration-150 hover:border-slate-600 hover:bg-slate-900"
+  >
+    <div className="flex items-center gap-3.5">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10">
+        <LogIn className="h-6 w-6 text-white" />
+      </div>
+      <div className="text-left">
+        <p className="text-sm font-medium leading-none text-white">Login / Register</p>
+        <p className="mt-1 text-xs text-slate-400">Access jobs, results & admit cards</p>
+      </div>
+    </div>
+    <ArrowRight className="h-6 w-6 shrink-0 text-slate-600 transition-transform duration-150 group-hover:translate-x-0.5" />
+  </button>
 
-              {user?.id ? (
-
-                <button
-                  className="group bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:scale-105 duration-300"
-                  onClick={() =>
-                  (window.location.href =
-                    user.role === "admin"
-                      ? "/admin"
-                      : "/dashboard")
-                  }
-                >
-
-                  <span className="px-5">
-                    Dashboard
-                  </span>
-
-                  <span className="w-12 h-12 rounded-lg bg-green-400 flex items-center justify-center">
-
-                    <Image
-                      src={arrow}
-                      width={48}
-                      height={48}
-                      alt="arrow"
-                      className="rounded-lg"
-                    />
-
-                  </span>
-
-                </button>
-
-              ) : (
-
-                <button
-                  className="group bg-gradient-to-r from-[#222627] to-[#414245] rounded-xl shadow-md px-1 py-1 flex items-center justify-between font-semibold text-white hover:scale-105 duration-300"
-                  onClick={() => setShowSignupForm(true)}
-                >
-
-                  <span className="px-5">
-                    Login / Register
-                  </span>
-
-                  <span className="w-12 h-12 rounded-lg bg-green-400 flex items-center justify-center">
-
-                    <Image
-                      src={arrow}
-                      width={48}
-                      height={48}
-                      alt="arrow"
-                      className="rounded-lg"
-                    />
-
-                  </span>
-
-                </button>
-
-              )}
-
-              <a
-                href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white border rounded-xl shadow-md px-5 py-3 flex items-center gap-3 font-semibold hover:scale-105 duration-300"
-              >
-
-                <Image
-                  src={wp}
-                  alt="WhatsApp"
-                  width={28}
-                  height={28}
-                />
-
-                Join WhatsApp
-
-              </a>
-
-            </div>
+  {/* Whatsapp */}
+   <a href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-4 transition-all duration-150 hover:border-green-200 hover:bg-green-50/40"
+  >
+    <div className="flex items-center gap-3.5">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50">
+        <Image src={wp} alt="WhatsApp" width={29} height={29} />
+      </div>
+      <div className="text-left">
+        <p className="text-sm font-medium leading-none text-gray-900">Join WhatsApp</p>
+        <p className="mt-1 text-xs text-gray-500">Instant government job updates</p>
+      </div>
+    </div>
+    <ArrowRight className="h-6 w-6 shrink-0 text-gray-300 transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-green-500" />
+  </a>
+</div>
 
             {/* TRUST TEXT */}
             <div className="flex flex-wrap gap-6 mt-8 text-sm font-medium text-gray-600">
@@ -307,7 +267,7 @@ export default function TopLinksSection({
         onOpenChange={setShowSignupForm}
       />
 
-    </section>
+    </section >
   );
 }
 
