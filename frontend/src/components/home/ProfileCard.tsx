@@ -18,10 +18,10 @@ interface ProfileCardProps {
 const foundersData: ProfileCardProps[] = [
   {
     name: 'Mr. Aditya Jaglan',
-    title: 'Founder of Jai Hind result',
+    title: 'Founder of Haryana Job Alert',
     description: "I started this platform because at my time, I didn't have the right knowledge and guideance about jobs and career. Now, You can use this platform to get your Dream JOB",
     profileImageUrl: '/aj.png',
-    logoUrl: '/jai-hind-title.png',
+    logoUrl: '/logo.jpg',
     instagramUrl: '#',
     bgColor: 'bg-gradient-to-br from-emerald-500 to-green-700',
     nameColor: 'text-yellow-300',
@@ -31,7 +31,7 @@ const foundersData: ProfileCardProps[] = [
     title: 'Founder of Value Plus Campus, Jind Haryana',
     description: "India's Premier Online Government Job Coaching Platform! We've been helping Students prepare for Government Jobs for 12 years. We offer both Online and Offline coaching.",
     profileImageUrl: '/js.png',
-    logoUrl: '/jai-hind-title.png',
+    logoUrl: '/logo.jpg',
     instagramUrl: '#',
     bgColor: 'bg-gradient-to-br from-red-500 to-rose-700',
     nameColor: 'text-white',
@@ -55,7 +55,7 @@ const ProfileCard = ({ name, title, description, profileImageUrl, logoUrl, insta
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="#" className="w-12 h-12 flex-shrink-0 rounded-full bg-white shadow-md flex items-center justify-center">
-                  <Image src={logoUrl} alt="Logo" width={40} height={40} className="rounded-full" unoptimized />
+                  <img src={logoUrl} alt="Logo" width={40} height={40} className="rounded-full" />
               </a>
               <a href="#" className="w-12 h-12 flex-shrink-0 rounded-full bg-gray-900 shadow-md flex items-center justify-center hover:bg-gray-700 transition-colors">
                   <ArrowRight size={24} />
@@ -115,4 +115,3 @@ export default function FoundersSection() {
     </section>
   );
 }
-

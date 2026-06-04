@@ -11,12 +11,14 @@ import AboutSection from '@/components/home/AboutSection';
 import TopLinksSection from '@/components/home/TopLinksSection';
 import PostsSection from '@/components/home/PostsSection';
 import MidCards from '@/components/home/MidCards';
-// import MockTestSection from '@/components/home/MockTestSection';
-// import CourseSection from '@/components/home/CourseSection';
+import MockTestSection from '@/components/home/MockTestSection';
+import CurrentAffairsSection from "@/components/home/CurrentAffairsSection";
+import CourseSection from '@/components/home/CourseSection';
 import FaqSection from '@/components/home/FaqSection';
 import { MockSeries } from "./mock-tests";
 import type { Course } from "@/components/admin/courses/CreateCourseForm";
 import type { CourseCategory } from "@/pages/admin/course-categories";
+import FoundersSection from "@/components/home/ProfileCard";
 
 interface PublicCourse extends Omit<Course, 'tags' | 'authors'> {
     slug: string;
@@ -97,7 +99,7 @@ const HomePage: NextPage<HomePageProps> = ({ categories, posts, categoriesWithPo
       </Head>
       <Header preloadedCategories={categories} preloadedCarousel={carouselItems} />
       <TopLinksSection categories={categories} />
-      <main className="md:p-4 container mx-auto max-w-7xl">
+      <main className="mx-auto max-w-screen-xl px-2 xl:px-6">
         <div className="mt-6">
             <div className="flex flex-col gap-6">
             <PostsSection posts={posts} />
@@ -108,15 +110,15 @@ const HomePage: NextPage<HomePageProps> = ({ categories, posts, categoriesWithPo
             <MidCards 
               categoriesWithPosts={categoriesWithPosts}
             />
-            {/* <MockTestSection series={series} /> */}
+            <MockTestSection series={series} />
             {/* <CurrentAffairsSection /> */}
-            {/* <CourseSection courses={courses} /> */}
+            <CourseSection courses={courses} />
             <AboutSection />
             <FaqSection />
             </div>
         </div>
         <div>
-          {/* <ProfileCard /> */}
+          <FoundersSection />
           {/* <FancyContainer/> */}
         </div>
       </main>

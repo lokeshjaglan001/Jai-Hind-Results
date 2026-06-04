@@ -141,8 +141,8 @@ export default function PostsSection({ posts }: { posts: Post[] }) {
           })}
         </div>
 
-        {/* FEATURES SECTION */}
-        {/*
+        {/* FEATURES SECTION
+        
         <div className="bg-[#0d0625] rounded-full px-2 py-4 shadow-xl hidden md:block mt-8">
           <div className="flex items-center justify-between gap-4 px-4">
             {features.map((feature, index) => (
@@ -166,8 +166,8 @@ export default function PostsSection({ posts }: { posts: Post[] }) {
               </div>
             ))}
           </div>
-        </div>
-        */}
+        </div> */}
+       
 
         {/* STATEWISE SECTION */}
         <h1 className="text-3xl font-bold my-8 text-center">

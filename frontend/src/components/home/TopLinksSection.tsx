@@ -30,33 +30,28 @@ export default function TopLinksSection({
   const { user } = useAuth();
 
   return (
-    <section className="bg-[#ffffff] px-4 sm:px-3 lg:px-6 overflow-hidden">
-
-      <div className="max-w-7xl mx-auto">
-
-        <div className="grid lg:grid-cols-[0.95fr_1.25fr] gap-8 lg:gap-16 items-center py-8 lg:py-20">
+    <section className="bg-white px-4 md:px-8 xl:px-12 overflow-hidden">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="grid lg:grid-cols-[0.95fr_1.25fr] gap-8 lg:gap-16 items-center py-8 lg:py-16">
           {/* LEFT SIDE */}
           <div>
-
-            <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold leading-tight text-gray-900">
-              Your Journey to a
-              <span className="block text-green-600">
+            <h1 className="text-4xl md:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-gray-900 tracking-tight">
+              Your Journey to a{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-green-600">
                 Government Job
               </span>
-              Starts Here
+              <br /> Starts Here
             </h1>
 
-            <p className="mt-6 text-lg text-gray-600 max-w-xl">
+            <p className="mt-4 text-base md:text-lg text-gray-600 max-w-xl leading-relaxed">
               Get the latest job alerts, admit cards, results,
               answer keys, documents, government schemes and
               everything you need for your career in one place.
             </p>
 
             {/* FEATURE CHIPS */}
-            <div className="flex flex-wrap gap-3 mt-8">
-
+            <div className="flex flex-wrap gap-2.5 mt-8">
               {categories.slice(0, 8).map((category) => (
-
                 <Link
                   key={category.id}
                   href={`/category/${category.name
@@ -64,85 +59,65 @@ export default function TopLinksSection({
                     .replace(/\s+/g, "-")}`}
                   prefetch={false}
                 >
-
-                  <div className="flex items-center gap-2 bg-white border rounded-xl px-4 py-2 shadow-sm hover:shadow-md transition-all">
-
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
-
-                    <span className="text-sm font-medium text-gray-700">
+                  <div className="flex items-center gap-1.5 bg-zinc-50 hover:bg-zinc-100 border border-zinc-200/50 rounded-full px-3.5 py-1.5 transition-all duration-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600" />
+                    <span className="text-xs font-semibold text-zinc-700">
                       {category.name}
                     </span>
-
                   </div>
-
                 </Link>
-
               ))}
-
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-col gap-3 my-4">
-  {/* Login / Register */}
-  <button
-    onClick={() => setShowSignupForm(true)}
-    className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950 px-5 py-4 transition-all duration-150 hover:border-slate-600 hover:bg-slate-900"
-  >
-    <div className="flex items-center gap-3.5">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10">
-        <LogIn className="h-6 w-6 text-white" />
-      </div>
-      <div className="text-left">
-        <p className="text-sm font-medium leading-none text-white">Login / Register</p>
-        <p className="mt-1 text-xs text-slate-400">Access jobs, results & admit cards</p>
-      </div>
-    </div>
-    <ArrowRight className="h-6 w-6 shrink-0 text-slate-600 transition-transform duration-150 group-hover:translate-x-0.5" />
-  </button>
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row max-w-lg">
+              {/* Login / Register */}
+              <button
+                onClick={() => setShowSignupForm(true)}
+                className="group flex-1 flex items-center justify-between rounded-full bg-black text-white px-6 py-3.5 transition-all duration-200 hover:bg-zinc-900 shadow-sm hover:shadow-md"
+              >
+                <div className="flex items-center gap-3">
+                  <LogIn className="h-5 w-5 text-white" />
+                  <span className="text-sm font-semibold">Login / Register</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-zinc-400 transition-transform duration-200 group-hover:translate-x-1" />
+              </button>
 
-  {/* Whatsapp */}
-   <a href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-4 transition-all duration-150 hover:border-green-200 hover:bg-green-50/40"
-  >
-    <div className="flex items-center gap-3.5">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-50">
-        <Image src={wp} alt="WhatsApp" width={29} height={29} />
-      </div>
-      <div className="text-left">
-        <p className="text-sm font-medium leading-none text-gray-900">Join WhatsApp</p>
-        <p className="mt-1 text-xs text-gray-500">Instant government job updates</p>
-      </div>
-    </div>
-    <ArrowRight className="h-6 w-6 shrink-0 text-gray-300 transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-green-500" />
-  </a>
-</div>
-
-            {/* TRUST TEXT */}
-            <div className="flex flex-wrap gap-6 mt-8 text-sm font-medium text-gray-600">
-
-              <span>✓ 100% Free</span>
-
-              <span>✓ No Registration Fee</span>
-
-              <span>✓ No Hidden Charges</span>
-
+              {/* Whatsapp */}
+              <a
+                href="https://whatsapp.com/channel/0029VbBbS0R7T8bTQRa9230i"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex-1 flex items-center justify-between rounded-full border border-green-200 bg-green-50/50 px-6 py-3.5 transition-all duration-200 hover:bg-green-50 hover:border-green-300 shadow-sm"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-100">
+                    <Image src={wp} alt="WhatsApp" width={16} height={16} className="object-contain" />
+                  </div>
+                  <span className="text-sm font-semibold text-green-700">Join WhatsApp</span>
+                </div>
+                <ArrowRight className="h-5 w-5 text-green-600 transition-all duration-200 group-hover:translate-x-1" />
+              </a>
             </div>
 
+            {/* TRUST TEXT */}
+            <div className="flex flex-wrap gap-5 mt-8 text-xs font-semibold text-gray-500">
+              <span className="flex items-center gap-1"><span className="text-green-600">✓</span> 100% Free</span>
+              <span className="flex items-center gap-1"><span className="text-green-600">✓</span> No Registration Fee</span>
+              <span className="flex items-center gap-1"><span className="text-green-600">✓</span> No Hidden Charges</span>
+            </div>
           </div>
 
           {/* RIGHT SIDE IMAGE */}
           <div className="hidden lg:flex relative justify-center items-center">
-
             <div
               className="
                 absolute
                 inset-0
                 bg-gradient-to-r
-                from-orange-200/40
+                from-orange-100/30
                 via-transparent
-                to-green-200/40
+                to-green-100/30
                 blur-3xl
                 scale-125
                 -z-10
@@ -153,11 +128,10 @@ export default function TopLinksSection({
               className="
                 relative
                 w-full
-                lg:scale-[1.25]
+                lg:scale-[1.15]
                 lg:translate-x-8
               "
             >
-
               <Image
                 src={freedomFighters}
                 alt="Freedom Fighters"
@@ -177,97 +151,88 @@ export default function TopLinksSection({
                   bottom-0
                   left-0
                   right-0
-                  h-32
+                  h-24
                   bg-gradient-to-b
                   from-transparent
                   via-[#ffffff]
                   to-[#ffffff]
                 "
               />
-
             </div>
-
           </div>
-
         </div>
 
         {/* STATS */}
-        <div className="mt-5 lg:mt-5 pb-15">
-          <div className="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
-            <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
-
-              {/* Stat 1 */}
-              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-green-50 flex items-center justify-center shrink-0">
-                  <BriefcaseBusiness className="w-6 h-6 lg:w-8 lg:h-8 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
-                    500+
-                  </h3>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1">
-                    Government Jobs
-                  </p>
-                </div>
+        <div className="mt-4 lg:mt-8 pb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            {/* Stat 1 */}
+            <div className="bg-zinc-50/50 border border-zinc-100/80 rounded-3xl p-5 sm:p-6 flex items-center gap-4 hover:bg-zinc-50/80 hover:shadow-sm transition-all duration-200">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-green-50 flex items-center justify-center shrink-0">
+                <BriefcaseBusiness className="w-6 h-6 lg:w-7 lg:h-7 text-green-600" />
               </div>
-
-              {/* Stat 2 */}
-              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0">
-                  <Users className="w-6 h-6 lg:w-8 lg:h-8 text-orange-500" />
-                </div>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
-                    10k+
-                  </h3>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1">
-                    Students Enrolled
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-none">
+                  500+
+                </h3>
+                <p className="text-xs lg:text-sm font-semibold text-gray-500 mt-1.5">
+                  Government Jobs
+                </p>
               </div>
+            </div>
 
-              {/* Stat 3 */}
-              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
-                  <FileText className="w-6 h-6 lg:w-8 lg:h-8 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
-                    100+
-                  </h3>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1">
-                    Admit Cards
-                  </p>
-                </div>
+            {/* Stat 2 */}
+            <div className="bg-zinc-50/50 border border-zinc-100/80 rounded-3xl p-5 sm:p-6 flex items-center gap-4 hover:bg-zinc-50/80 hover:shadow-sm transition-all duration-200">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0">
+                <Users className="w-6 h-6 lg:w-7 lg:h-7 text-orange-500" />
               </div>
-
-              {/* Stat 4 */}
-              <div className="p-4 sm:p-6 lg:p-8 flex items-center gap-3 lg:gap-5">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-2xl bg-yellow-50 flex items-center justify-center shrink-0">
-                  <Trophy className="w-6 h-6 lg:w-8 lg:h-8 text-yellow-500" />
-                </div>
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-none">
-                    200+
-                  </h3>
-                  <p className="text-sm lg:text-base text-gray-500 mt-1">
-                    Results Declared
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-none">
+                  10k+
+                </h3>
+                <p className="text-xs lg:text-sm font-semibold text-gray-500 mt-1.5">
+                  Students Enrolled
+                </p>
               </div>
+            </div>
 
+            {/* Stat 3 */}
+            <div className="bg-zinc-50/50 border border-zinc-100/80 rounded-3xl p-5 sm:p-6 flex items-center gap-4 hover:bg-zinc-50/80 hover:shadow-sm transition-all duration-200">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                <FileText className="w-6 h-6 lg:w-7 lg:h-7 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-none">
+                  100+
+                </h3>
+                <p className="text-xs lg:text-sm font-semibold text-gray-500 mt-1.5">
+                  Admit Cards
+                </p>
+              </div>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="bg-zinc-50/50 border border-zinc-100/80 rounded-3xl p-5 sm:p-6 flex items-center gap-4 hover:bg-zinc-50/80 hover:shadow-sm transition-all duration-200">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-yellow-50 flex items-center justify-center shrink-0">
+                <Trophy className="w-6 h-6 lg:w-7 lg:h-7 text-yellow-500" />
+              </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-none">
+                  200+
+                </h3>
+                <p className="text-xs lg:text-sm font-semibold text-gray-500 mt-1.5">
+                  Results Declared
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
 
       <AuthDialog
         open={showSignupForm}
         onOpenChange={setShowSignupForm}
       />
-
-    </section >
+    </section>
   );
 }
 

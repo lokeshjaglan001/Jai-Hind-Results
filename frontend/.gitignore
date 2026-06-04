@@ -42,3 +42,6 @@ next-env.d.ts
 
 # sitemap files in public folder
 /public/sitemap*.xml
+
+# macOS disk images
+*.dmg
