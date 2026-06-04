@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { api } from "@/lib/api";
-import { Post } from "@/pages/admin/posts"; 
+import { Post } from "@/pages/admin/posts";
 import { Category } from "@/pages/admin/getting-started/categories";
 import Header from '@/components/shared/Header';
 import Sidebar from '@/components/shared/Sidebar';
@@ -19,19 +19,20 @@ import { MockSeries } from "./mock-tests";
 import type { Course } from "@/components/admin/courses/CreateCourseForm";
 import type { CourseCategory } from "@/pages/admin/course-categories";
 import FoundersSection from "@/components/home/ProfileCard";
+import FancyContainer from "@/components/about/FancyContainer";
 
 interface PublicCourse extends Omit<Course, 'tags' | 'authors'> {
-    slug: string;
-    thumbnail_url: string | null;
-    category: CourseCategory | undefined;
-    authors: { full_name: string; avatar_url: string }[];
-    tags: { tag: { name: string } }[];
-    enrolled_users_count?: number;
-    lesson_count?: number;
-    total_duration_hhmm?: string | null;
-    rating: number;
-    reviews: number;
-    offerEndsSoon: boolean;
+  slug: string;
+  thumbnail_url: string | null;
+  category: CourseCategory | undefined;
+  authors: { full_name: string; avatar_url: string }[];
+  tags: { tag: { name: string } }[];
+  enrolled_users_count?: number;
+  lesson_count?: number;
+  total_duration_hhmm?: string | null;
+  rating: number;
+  reviews: number;
+  offerEndsSoon: boolean;
 }
 
 interface CategoryWithPosts {
@@ -101,25 +102,25 @@ const HomePage: NextPage<HomePageProps> = ({ categories, posts, categoriesWithPo
       <TopLinksSection categories={categories} />
       <main className="mx-auto max-w-screen-xl px-2 xl:px-6">
         <div className="mt-6">
-            <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
             <PostsSection posts={posts} />
             <div>
               {/* <GoogleAd slot="4546556493" /> */}
             </div>
             {/* <AdBanner text="Google Ads Section" className="h-88" /> */}
-            <MidCards 
+            <MidCards
               categoriesWithPosts={categoriesWithPosts}
             />
-            <MockTestSection series={series} />
+            {/* <MockTestSection series={series} /> */}
             {/* <CurrentAffairsSection /> */}
-            <CourseSection courses={courses} />
-            <AboutSection />
-            <FaqSection />
-            </div>
+            {/* <CourseSection courses={courses} /> */}
+            {/* <AboutSection /> */}
+            {/* <FaqSection /> */}
+          </div>
         </div>
         <div>
-          <FoundersSection />
-          {/* <FancyContainer/> */}
+          {/* <FoundersSection /> */}
+          {/* <FancyContainer /> */}
         </div>
       </main>
       <Footer />
